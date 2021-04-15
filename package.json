@@ -1,0 +1,17 @@
+{
+  "name": "vue3",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:JacobHsu/vue3.git",
+  "author": "jacobhsu <jacob.hsu.tw@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^1.8.2"
+  },
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "s": "yarn docs:dev",
+    "g": "yarn docs:build"
+  }
+}
