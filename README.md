@@ -1,6 +1,10 @@
 # vue3
 
+vuejs / [docs-next-zh-cn](https://github.com/vuejs/docs-next-zh-cn)
+
 ## VuePress
+
+該站點基於 `Vuepress` 構建而成。網站內容在 `docs` 文件夾內，格式為 `Markdown`
 
 [VuePress](https://vuepress.vuejs.org/)
 [getting-started](https://vuepress.vuejs.org/zh/guide/getting-started.html)
