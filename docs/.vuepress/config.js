@@ -14,6 +14,17 @@ const sidebar = {
         '/guide/single-file-component'
       ]
     }
+  ],
+  api: [
+    '/api/application-config',
+    {
+      title: '响应性 API',
+      path: '/api/reactivity-api',
+      collapsable: false,
+      children: [
+        '/api/basic-reactivity'
+      ]
+    },
   ]
 }
 
@@ -73,7 +84,8 @@ module.exports = {
               }
             ],
             sidebar: {
-              '/guide/': sidebar.guide
+              '/guide/': sidebar.guide,
+              '/api/': sidebar.api
             },
           },
           '/en': {
