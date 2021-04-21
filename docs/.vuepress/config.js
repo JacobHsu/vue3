@@ -22,7 +22,8 @@ const sidebar = {
       path: '/api/reactivity-api',
       collapsable: false,
       children: [
-        '/api/basic-reactivity'
+        '/api/basic-reactivity',
+        '/api/computed-watch-api'
       ]
     },
   ]
