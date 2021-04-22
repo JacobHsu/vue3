@@ -168,3 +168,27 @@ interface WatchOptions extends WatchEffectOptions {
 ```
 
 **参考**：[`watch` 指南](../guide/reactivity-computed-watchers.html#watch)
+
+## watch vs watchEffect
+
+```js
+<template>
+  <p>search tem - {{search}}</p>
+</template>
+<script>
+import {watch, watchEffect} from 'vue'
+export defaullt {
+  setup() {
+    const search = ref('')
+    
+    watch(search,()=> {
+      console.log('watch function ran')
+    })
+
+    watchEffect(()=>{
+      console.log('watchEffect function ran') // runs initiially when the component first loads are when the setup function
+    })
+  }
+}
+</script>
+```
