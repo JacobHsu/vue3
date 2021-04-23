@@ -174,6 +174,7 @@ interface WatchOptions extends WatchEffectOptions {
 ```js
 <template>
   <p>search tem - {{search}}</p>
+  <button @click="handleClick">stop watching</button>
 </template>
 <script>
 import {watch, watchEffect} from 'vue'
@@ -181,13 +182,20 @@ export defaullt {
   setup() {
     const search = ref('')
     
-    watch(search,()=> {
+    const stopWatch = watch(search,()=> {
       console.log('watch function ran')
     })
 
-    watchEffect(()=>{
-      console.log('watchEffect function ran') // runs initiially when the component first loads are when the setup function
+    const stopWatchEffect = watchEffect(()=>{
+      console.log('watchEffect function ran', search.value) // runs initiially when the component first loads are when the setup function
     })
+
+    const handleClick = () => {
+      stopWatch()
+      stopWatchEffect()
+    }
+
+    return {search, handleClick}
   }
 }
 </script>
